@@ -4,11 +4,11 @@
 	<xs:element name="precios">
 		<xs:complexType>
 			<xs:sequence>
-				<xs:element name="precio" type="decimal">
+				<xs:element name="precio" type="decimal" maxOccurs="unbounded">
 					<xs:simpleType>
 						<xs:restriction base="decimal">
 							<xs:totalDigits value="3" />
-							<xs:fractionDigits value="[0-2]" />
+							<xs:fractionDigits value="2" />
 						</xs:restriction>
 					</xs:simpleType>
 				</xs:element>
