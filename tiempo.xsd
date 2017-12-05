@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+<xs:element="weather">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="city" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="coord">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="lon" type="xs:decimal" />
+									<xs:element name="lat" type="xs:decimal" />
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="weather">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="id" type="xs:integer" />
+									<xs:element name="main" type="xs:string" />
+									<xs:element name="description" type="xs:string" />
+									<xs:element name="icon" type="xs:string" />
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="base" type="xs:string" />
+						<xs:element name="main">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="temp" type="xs:decimal" />
+									<xs:element name="pressure" type="xs:integer" />
+									<xs:element name="humidity" type="xs:integer" />
+									<xs:element name="temp_min" type="xs:decimal" />
+									<xs:element name="temp_max" type="xs:decimal" />
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="visibility" type="xs:integer" />
+						<xs:element name="wind">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="speed" type="xs:decimal" />
+									<xs:element name="deg" type="xs:integer" />
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="clouds">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="all" type="xs:integer" />
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="dt" type="xs:integer" />
+						<xs:element name="sys">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="type" type="xs:integer" />
+									<xs:element name="id" type="xs:integer" />
+									<xs:element name="message" type="xs:decimal" />
+									<xs:element name="country" type="xs:string" />
+									<xs:element name="sunrise" type="xs:integer" />
+									<xs:element name="sunset" type="xs:integer" />
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="id" type="xs:integer" />
+						<xs:element name="name" type="xs:string" />
+						<xs:element name="cod" type="xs:integer" />
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:element>
